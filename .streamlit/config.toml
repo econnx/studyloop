@@ -1,0 +1,35 @@
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+primaryColor = "#5B4BDB"
+backgroundColor = "#F7F5F0"
+secondaryBackgroundColor = "#EFEBE3"
+textColor = "#1C1A27"
+borderColor = "#E4DED3"
+linkColor = "#5B4BDB"
+font = "Manrope:https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+headingFont = "Unbounded:https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&display=swap"
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+headingFontSizes = ["2rem", "1.5rem", "1.25rem", "1.1rem", "1rem", "1rem"]
+baseRadius = "14px"
+buttonRadius = "full"
+showWidgetBorder = true
+greenColor = "#1F9D74"
+greenBackgroundColor = "#E3F5EE"
+redColor = "#D6455D"
+redBackgroundColor = "#FBE7EA"
+
+[theme.sidebar]
+backgroundColor = "#1C1A27"
+secondaryBackgroundColor = "#2A2738"
+textColor = "#EEEBFA"
+primaryColor = "#A99BFF"
+borderColor = "#3A3650"
+
+[client]
+toolbarMode = "minimal"

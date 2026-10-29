@@ -1,0 +1,8 @@
+# Personal data: Moodle token, browser profile, notes, cache — never commit
+data/
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
