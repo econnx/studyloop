@@ -2,7 +2,7 @@
 
 **Turn your Moodle lectures into study notes and quizzes — with a free AI that runs on your own computer.**
 
-I'm a first-year economics student. Every week Moodle fills up with slides, PDFs and textbook chapters, and I wanted
+I'm a student. Every week Moodle fills up with slides, PDFs and textbook chapters, and I wanted
 one place that reads them for me, writes clear notes in my language and then checks whether I actually understood.
 So I built it.
 
@@ -77,4 +77,4 @@ Your data (token, notes, cache) lives in the `data/` folder, which is never comm
 
 ---
 
-Built by [@Econnx1](https://x.com/Econnx1), economics student at Kyiv School of Economics 🇺🇦
+Built by [@Econnx1](https://x.com/Econnx1) 🇺🇦
