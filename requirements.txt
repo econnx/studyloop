@@ -1,0 +1,6 @@
+streamlit>=1.40
+requests
+pymupdf
+python-pptx
+python-docx
+playwright

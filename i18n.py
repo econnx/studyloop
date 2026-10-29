@@ -1,0 +1,215 @@
+"""Interface translations: English (default), Ukrainian, Russian."""
+
+APP_NAME = "StudyLoop"
+UI_LANGS = {"en": "EN", "uk": "UA", "ru": "RU"}
+LANG = "en"  # set by app.py on every run
+
+# How each notes language is named inside a sentence ("notes in Ukrainian")
+LANG_IN = {
+    "en": {"English": "English", "Українська": "Ukrainian", "Русский": "Russian"},
+    "uk": {"English": "англійською", "Українська": "українською", "Русский": "російською"},
+    "ru": {"English": "английском", "Українська": "украинском", "Русский": "русском"},
+}
+DEFAULT_NOTES_LANG = {"en": "English", "uk": "Українська", "ru": "Русский"}
+
+PLURALS = {  # (one, few, many); English uses only one/many
+    "notes": (("note", "", "notes"), ("конспект", "конспекти", "конспектів"), ("конспект", "конспекта", "конспектов")),
+    "quizzes": (("quiz", "", "quizzes"), ("тест", "тести", "тестів"), ("тест", "теста", "тестов")),
+    "files": (("file", "", "files"), ("файл", "файли", "файлів"), ("файл", "файла", "файлов")),
+}
+
+S = {  # key: (en, uk, ru)
+    "tagline": ("Moodle lectures → notes → quizzes", "Лекції з Moodle → конспект → тест",
+                "Лекции из Moodle → конспект → тест"),
+    "ui_lang": ("Interface", "Інтерфейс", "Интерфейс"),
+    "notes_lang": ("Notes language", "Мова конспекту", "Язык конспекта"),
+    "ollama_down": ("The AI isn't running. In Terminal: `ollama serve`",
+                    "Нейромережа не запущена. У терміналі: `ollama serve`",
+                    "Нейросеть не запущена. В терминале: `ollama serve`"),
+    "moodle_on": ("Moodle connected", "Moodle підключено", "Moodle подключён"),
+    "moodle_off": ("Moodle not connected", "Moodle не підключено", "Moodle не подключён"),
+    "moodle_url": ("Moodle address", "Адреса Moodle", "Адрес Moodle"),
+    "login_hint": ("A Chrome window will open — sign in with Google and it will close by itself. "
+                   "If it asks about the Moodle app, click “Cancel”.",
+                   "Відкриється вікно Chrome — увійди через Google, воно закриється саме. "
+                   "Якщо спитає про застосунок Moodle — натисни «Скасувати».",
+                   "Откроется окно Chrome — войди через Google, оно закроется само. "
+                   "Если спросит про приложение Moodle — нажми «Отмена»."),
+    "login_btn": ("Sign in with Google", "Увійти через Google", "Войти через Google"),
+    "login_wait": ("Waiting for sign-in in the Chrome window…", "Чекаю на вхід у вікні Chrome…",
+                   "Жду вход в окне Chrome…"),
+    "login_failed": ("Couldn't sign in: {e}", "Не вдалося увійти: {e}", "Не удалось войти: {e}"),
+    "window_closed": ("the window was closed", "вікно закрито", "окно закрыто"),
+    "other_login": ("Other ways to sign in", "Інші способи входу", "Другие способы входа"),
+    "token": ("Token", "Токен", "Токен"),
+    "token_btn": ("Connect with a token", "Підключитися за токеном", "Подключиться по токену"),
+    "advanced": ("⚙️ Advanced", "⚙️ Додатково", "⚙️ Дополнительно"),
+    "model": ("AI model", "Нейромережа", "Нейросеть"),
+    "logout": ("Sign out of Moodle", "Вийти з Moodle", "Выйти из Moodle"),
+    "loading_courses": ("Loading courses…", "Завантажую курси…", "Загружаю курсы…"),
+    "loading_files": ("Loading materials…", "Завантажую матеріали…", "Загружаю материалы…"),
+    "greet_morning": ("Good morning", "Доброго ранку", "Доброе утро"),
+    "greet_day": ("Good afternoon", "Добрий день", "Добрый день"),
+    "greet_evening": ("Good evening", "Добрий вечір", "Добрый вечер"),
+    "hero": ("Pick your lectures — I'll write notes in {lang} and a quiz to test yourself.",
+             "Обери лекції — я зроблю конспект {lang} і тест для перевірки.",
+             "Отметь лекции — я сделаю конспект на {lang} и тест для проверки."),
+    "starting": ("Starting…", "Починаю…", "Начинаю…"),
+    "job_running": ("**⏳ {title}** · {m} min so far — you can use other tabs meanwhile",
+                    "**⏳ {title}** · триває {m} хв — можна користуватися іншими вкладками",
+                    "**⏳ {title}** · идёт {m} мин. — можно пользоваться другими вкладками"),
+    "job_done": ("Done: **{title}** — see the “My notes” tab", "Готово: **{title}** — дивись у вкладці «Мої конспекти»",
+                 "Готово: **{title}** — смотри во вкладке «Мои конспекты»"),
+    "job_error": ("Error: **{title}** — {error}", "Помилка: **{title}** — {error}", "Ошибка: **{title}** — {error}"),
+    "tab_create": ("✨ Create", "✨ Створити", "✨ Создать"),
+    "tab_seminar": ("🎓 Seminar", "🎓 Семінар", "🎓 Семинар"),
+    "tab_notes": ("📝 My notes", "📝 Мої конспекти", "📝 Мои конспекты"),
+    "tab_quiz": ("🎯 Quizzes", "🎯 Тести", "🎯 Тесты"),
+    "pick_title": ("Pick materials", "Обери матеріали", "Выбери материалы"),
+    "pick_sub": ("Select one or more lectures", "Познач одну або кілька лекцій", "Отметь одну или несколько лекций"),
+    "course": ("Course", "Курс", "Курс"),
+    "moodle_error": ("Moodle error: {e}", "Помилка Moodle: {e}", "Ошибка Moodle: {e}"),
+    "connect_hint": ("Connect Moodle in the left panel — or upload files manually.",
+                     "Підключи Moodle на панелі зліва — або завантаж файли вручну.",
+                     "Подключи Moodle в панели слева — или загрузи файлы вручную."),
+    "upload": ("Or drop files here", "Або перетягни файли сюди", "Или перетащи файлы сюда"),
+    "make_title": ("Create notes", "Створи конспект", "Создай конспект"),
+    "make_selected": ("Materials selected: {n}", "Вибрано матеріалів: {n}", "Выбрано материалов: {n}"),
+    "make_none": ("Select materials above first", "Спершу познач матеріали вище", "Сначала отметь материалы выше"),
+    "title": ("Title", "Назва", "Название"),
+    "title_ph": ("e.g. Lecture 3 — Supply and demand", "Наприклад: Лекція 3 — Попит і пропозиція",
+                 "Например: Лекция 3 — Спрос и предложение"),
+    "formula_mode": ("🧮 Formula mode — read PDFs as images (more accurate, but slower)",
+                     "🧮 Режим для формул — читати PDF як картинки (точніше, але повільніше)",
+                     "🧮 Режим для формул — читать PDF как картинки (точнее, но медленнее)"),
+    "create_btn": ("✨ Create notes", "✨ Створити конспект", "✨ Создать конспект"),
+    "busy": ("Another generation is running — wait until it finishes.",
+             "Зараз триває інша генерація — дочекайся її завершення.",
+             "Сейчас идёт другая генерация — дождись её окончания."),
+    "reading": ("📥 Reading: {item}", "📥 Читаю: {item}", "📥 Читаю: {item}"),
+    "reading_image": ("👁️ Recognizing an image: {item}", "👁️ Розпізнаю картинку: {item}",
+                      "👁️ Распознаю картинку: {item}"),
+    "no_text": ("Couldn't extract text from any of the materials.", "Не вдалося витягти текст із жодного матеріалу.",
+                "Не удалось извлечь текст ни из одного материала."),
+    "summarizing": ("✍️ Writing notes, part {i} of {n}…", "✍️ Конспектую частину {i} з {n}…",
+                    "✍️ Конспектирую часть {i} из {n}…"),
+    "job_note": ("Notes “{title}”", "Конспект «{title}»", "Конспект «{title}»"),
+    "need_moodle_t": ("Moodle required", "Потрібен Moodle", "Нужен Moodle"),
+    "need_moodle": ("Connect Moodle in the left panel — I'll read the course syllabus.",
+                    "Підключи Moodle на панелі зліва — я прочитаю силабус курсу.",
+                    "Подключи Moodle в панели слева — я прочитаю силлабус курса."),
+    "syl_title": ("Read the syllabus", "Прочитати силабус", "Прочитать силлабус"),
+    "syl_sub": ("I'll find all seminars, topics and readings in it", "Я знайду в ньому всі семінари, теми й літературу",
+                "Я найду в нём все семинары, темы и литературу"),
+    "syl_missing": ("Couldn't find a syllabus in this course.", "У цьому курсі не знайшов силабус.",
+                    "В этом курсе не нашёл силлабус."),
+    "syl_btn": ("📑 Read the syllabus", "📑 Прочитати силабус", "📑 Прочитать силлабус"),
+    "syl_reading": ("Reading the syllabus… (about a minute)", "Читаю силабус… (близько хвилини)",
+                    "Читаю силлабус… (около минуты)"),
+    "seminar": ("Seminar", "Семінар", "Семинар"),
+    "seminar_n": ("Seminar {n} — {title}", "Семінар {n} — {title}", "Семинар {n} — {title}"),
+    "reread": ("Re-read the syllabus", "Перечитати силабус", "Перечитать силлабус"),
+    "outcomes": ("**What you need to know:**", "**Що треба вміти:**", "**Что нужно уметь:**"),
+    "activities": ("In class: {a}", "На семінарі: {a}", "На семинаре: {a}"),
+    "sem_mat": ("Seminar materials", "Матеріали до семінару", "Материалы к семинару"),
+    "sem_mat_sub": ("I've already selected the right ones — feel free to adjust",
+                    "Я вже позначив потрібні — можна виправити", "Я уже отметил нужные — можно поправить"),
+    "finding_lectures": ("Finding lectures for this seminar…", "Шукаю лекції до цього семінару…",
+                         "Ищу лекции к этому семинару…"),
+    "lectures": ("**📑 Lectures**", "**📑 Лекції**", "**📑 Лекции**"),
+    "no_lecture": ("Couldn't find lecture {n} for this seminar in Moodle yet. If it's there, select it manually.",
+                   "Лекцію {n} до цього семінару в Moodle поки не знайшов. Якщо вона є — познач вручну.",
+                   "Лекцию {n} к этому семинару в Moodle пока не нашёл. Если она есть — отметь вручную."),
+    "other_files": ("Add other files", "Додати інші файли", "Добавить другие файлы"),
+    "textbooks": ("**📚 Textbooks**", "**📚 Підручники**", "**📚 Учебники**"),
+    "book_missing": ("• {book} — the textbook file isn't in Moodle", "• {book} — файлу підручника немає в Moodle",
+                     "• {book} — файла учебника нет в Moodle"),
+    "opening_book": ("Opening {book}…", "Відкриваю {book}…", "Открываю {book}…"),
+    "book_no_pages": ("• {book} — couldn't find the right pages", "• {book} — не знайшов потрібні сторінки",
+                      "• {book} — не нашёл нужные страницы"),
+    "pages_n": ("{n} pp.", "{n} стор.", "{n} стр."),
+    "sem_make": ("Make seminar notes", "Зробити конспект до семінару", "Сделать конспект к семинару"),
+    "sem_make_sub": ("About {m} min — you can do other things meanwhile", "Приблизно {m} хв — можна займатися іншим",
+                     "Примерно {m} мин. — можно заниматься другим"),
+    "extras": ("➕ Add useful knowledge beyond the materials (as a separate section)",
+               "➕ Додавати корисні знання не з матеріалів (окремим розділом)",
+               "➕ Добавлять полезные знания не из материалов (отдельным разделом)"),
+    "extras_hint": ("Additions go into a separate “➕” section. The model on your computer can make mistakes there — "
+                    "double-check those facts before using them in class.",
+                    "Доповнення йдуть окремим розділом «➕». Модель на твоєму комп'ютері може в них помилятися — "
+                    "перевіряй факти звідти, перш ніж говорити на семінарі.",
+                    "Дополнения идут отдельным разделом «➕». Модель на твоём компьютере может в них ошибаться — "
+                    "проверяй факты оттуда перед тем, как говорить на семинаре."),
+    "sem_btn": ("🎓 Make seminar notes", "🎓 Зробити конспект до семінару", "🎓 Сделать конспект к семинару"),
+    "part_progress": ("{src} — part {i} of {n}", "{src} — частина {i} з {n}", "{src} — часть {i} из {n}"),
+    "job_sem": ("Seminar {n} prep", "Підготовка до семінару {n}", "Подготовка к семинару {n}"),
+    "sem_step_notes": ("Writing detailed notes", "Пишу детальний конспект", "Пишу подробный конспект"),
+    "sem_step_questions": ("Preparing questions with answers", "Готую питання з відповідями",
+                           "Готовлю вопросы с ответами"),
+    "sem_step_examples": ("Collecting examples and cases", "Збираю приклади та кейси", "Собираю примеры и кейсы"),
+    "sem_step_extras": ("Adding knowledge beyond the materials", "Додаю знання не з матеріалів",
+                        "Добавляю знания не из материалов"),
+    "sem_step_checklist": ("Making a checklist", "Роблю чекліст", "Делаю чек-лист"),
+    "empty_notes_t": ("Nothing here yet", "Поки порожньо", "Пока пусто"),
+    "empty_notes": ("Create your first notes in the “Create” tab.", "Створи перший конспект у вкладці «Створити».",
+                    "Создай первый конспект во вкладке «Создать»."),
+    "notes": ("Notes", "Конспект", "Конспект"),
+    "download": ("⬇️ Download", "⬇️ Завантажити", "⬇️ Скачать"),
+    "delete": ("🗑️ Delete", "🗑️ Видалити", "🗑️ Удалить"),
+    "chat_title": ("💬 Ask the AI", "💬 Запитай нейромережу", "💬 Спроси нейросеть"),
+    "clear": ("Clear", "Очистити", "Очистить"),
+    "no_source": ("There's no source text for these notes — I'll answer from the notes themselves.",
+                  "Для цього конспекту немає вихідного тексту — відповідаю за самим конспектом.",
+                  "Для этого конспекта нет исходного текста — отвечаю по самому конспекту."),
+    "chat_empty": ("For example: “Explain elasticity with an example” or “What questions could come up at the seminar?”",
+                   "Наприклад: «Поясни еластичність на прикладі» або «Які питання можуть бути на семінарі?»",
+                   "Например: «Объясни эластичность на примере» или «Какие вопросы могут быть на семинаре?»"),
+    "chat_input": ("Ask anything about this lecture…", "Запитай щось про цю лекцію…", "Спроси что-нибудь по этой лекции…"),
+    "quick_detail": ("📚 In detail", "📚 Детально", "📚 Детально"),
+    "quick_seminar": ("🎓 Seminar", "🎓 Семінар", "🎓 Семинар"),
+    "quick_simple": ("🧒 Simpler", "🧒 Простіше", "🧒 Проще"),
+    "to_note": ("➕ Add to notes", "➕ У конспект", "➕ В конспект"),
+    "added": ("Added to notes ✅", "Додано в конспект ✅", "Добавлено в конспект ✅"),
+    "replace": ("🔁 Replace", "🔁 Замінити", "🔁 Заменить"),
+    "replaced": ("Notes replaced ✅", "Конспект замінено ✅", "Конспект заменён ✅"),
+    "empty_quiz_t": ("No quizzes yet", "Тестів поки немає", "Тестов пока нет"),
+    "empty_quiz": ("Create notes first — I'll write questions based on them.",
+                   "Спершу створи конспект — за ним я складу питання.",
+                   "Сначала создай конспект — по нему я составлю вопросы."),
+    "quiz_note": ("Which notes", "За яким конспектом", "По какому конспекту"),
+    "questions": ("Questions", "Питань", "Вопросов"),
+    "new_quiz": ("🎲 New quiz", "🎲 Новий тест", "🎲 Новый тест"),
+    "making_quiz": ("Writing questions…", "Складаю питання…", "Составляю вопросы…"),
+    "press_new_t": ("Click “New quiz”", "Натисни «Новий тест»", "Нажми «Новый тест»"),
+    "press_new": ("Questions will be based on the selected notes.", "Питання будуть за вибраним конспектом.",
+                  "Вопросы будут по выбранному конспекту."),
+    "v90": ("Excellent! 🔥", "Чудово! 🔥", "Отлично! 🔥"),
+    "v70": ("Good job! 💪", "Добре! 💪", "Хорошо! 💪"),
+    "v50": ("Not bad, but worth reviewing 📖", "Непогано, але варто повторити 📖", "Неплохо, но стоит повторить 📖"),
+    "v0": ("Re-read the notes and try again 🌱", "Перечитай конспект і спробуй ще раз 🌱",
+           "Перечитай конспект и попробуй снова 🌱"),
+    "score": ("Correct answers: {s} of {n}", "Правильних відповідей: {s} з {n}", "Правильных ответов: {s} из {n}"),
+    "correct": ("Correct ✅", "Правильно ✅", "Верно ✅"),
+    "right_answer": ("Correct answer: **{a}**", "Правильна відповідь: **{a}**", "Правильный ответ: **{a}**"),
+    "check": ("Check answers", "Перевірити відповіді", "Проверить ответы"),
+}
+
+_IDX = {"en": 0, "uk": 1, "ru": 2}
+
+
+def t(key: str, **kw) -> str:
+    """Translated string for the current interface language; unknown keys are returned as is."""
+    if key not in S:
+        return key
+    text = S[key][_IDX[LANG]]
+    return text.format(**kw) if kw else text
+
+
+def count(n: int, key: str) -> str:
+    """'1 note' / '5 notes', '2 конспекти', '5 конспектов'."""
+    one, few, many = PLURALS[key][_IDX[LANG]]
+    if LANG == "en":
+        return f"{n} {one if n == 1 else many}"
+    if n % 10 == 1 and n % 100 != 11:
+        return f"{n} {one}"
+    return f"{n} {few}" if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14 else f"{n} {many}"
